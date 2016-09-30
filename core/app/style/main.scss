@@ -1,0 +1,408 @@
+@import "../../../node_modules/purecss-sass/vendor/assets/stylesheets/_purecss.scss";
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: "Oxygen", sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+video {
+	height: 200px;
+	margin: 0 0.25em;
+	padding: 0;
+	display: inline-block;
+}
+
+.videoBox > div {
+  display: inline;
+  text-align: center;
+}
+
+.local {
+display: inline;
+}
+
+.remotes {
+display: inline;
+}
+
+.videoContainer {
+display: inline-block;
+}
+
+.root {
+	height: 100%;
+}
+
+/* MainContainer: Contains Header, SideBar and Content */
+
+.mainContainer {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+/* Registration */
+
+.pure-button-primary, .pure-button-secondary {
+  margin-right: 0.5em;
+}
+
+input {
+	margin-right: 1em;
+}
+
+.registrationErrorMessage {
+	text-align: center;
+	margin: 0 auto;
+	color: red;
+	font-weight: bold;
+	padding: 1em;
+}
+
+.registrationLogo {
+	margin-left: 180px;
+}
+
+.registrationContainer {
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.registration {
+  margin: 0 auto;
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+}
+
+.registration fieldset {
+	width: 500px;
+}
+
+/* Header Menu */
+
+.header {
+	position: relative;
+	padding-top: 2px;
+	padding-left: 2px;
+	border-bottom: 1px solid #D5D5D5;
+}
+
+.gravatarIcon {
+	padding: 0.5em;
+}
+
+.gravatarIcon > img {
+	border-radius: 4px;
+}
+
+.logo{
+
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+}
+/* Content Area */
+
+.content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Main View */
+
+.mainView {
+	flex: 1;
+	display: flex;
+}
+
+/* Side bar */
+
+.teamActivity {
+	color: blue;
+	font-weight: bold;
+}
+
+.sideBar {
+	flex: 1;
+	padding: 1em;
+	min-width: 150px;
+	max-width: 300px;
+	color: black;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+.teamHeader a {
+	color: #F99;
+}
+
+.teamHeader a:hover {
+	color: #F00;
+	transition: color 0.25s ease;
+}
+
+.teamHeader {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	font-size: 1.5em;
+	border-bottom: 1px solid #AAA;
+}
+
+.pure-button {
+	vertical-align: inherit;
+}
+
+.teamList {
+	list-style: none;
+	padding-left: 1em;
+}
+
+.team {
+	cursor: pointer;
+}
+
+.activeTeamHeader {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: red;
+}
+
+.activeTeamName {
+	position: relative;
+	margin: 0;
+	color: red;
+	text-align: left;
+	display: flex;
+	height: 2em;
+	justify-content: space-between;
+	margin-bottom: 0.25em;
+	border-bottom: 1px solid #DDD;
+}
+
+.dropDownMenu {
+	position: relative;
+	bottom: -3px;
+	color: #FBB;
+}
+
+.dropDownMenu:hover {
+	color: red;
+	transition: color 0.5s ease;
+}
+
+.dropDownContent {
+	display: none;
+	position: absolute;
+	margin: 0 auto;
+}
+
+.dropDownContent .menuIcon {
+	position: relative;
+	bottom: 0;
+	display: block;
+	color: #FBB;
+}
+
+.dropDownContent .menuIcon:hover {
+	color: red;
+	transition: color 0.5s ease;
+}
+
+.dropDownContent .menuIconInfo {
+	display: none;
+	position: absolute;
+	right: 100%;
+	bottom: 0;
+	font-weight: 100;
+	color: red;
+	white-space: nowrap;
+	background-color: rgba(255, 255, 255, 1);
+	margin-right: 4px;
+	padding: 0 7px;
+}
+
+.dropDownMenu:hover .dropDownContent {
+	display: block;
+}
+
+.dropDownContent .menuIcon:hover .menuIconInfo {
+	display: inline;
+}
+
+.activeTeam {
+	padding: 1em 0;
+}
+
+.activeTeamMember {
+	list-style: none;
+	color: black;
+}
+
+.activeTeamInvite {
+	font-size: 0.8em;
+	color: #AAA;
+	text-align: right;
+}
+
+.activeTeamInvite a {
+	cursor: pointer;
+}
+
+.otherTeams {
+	position: relative;
+	font-style: italic;
+	padding: 5px 7px;
+	border-bottom: 1px solid white;
+}
+
+/* Create Team View */
+
+.addTeamMember:hover:after {
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	content: "Add Team Member";
+	position: absolute;
+ 	bottom: 3px;
+ 	right: 10px;
+	padding: 3px;
+	border-radius: 2px;
+}
+
+.teamContent {
+	padding: 1.5em 1em;
+	width: 100%;
+}
+
+/* Invite Team View */
+
+.searchResult {
+	cursor: pointer;
+	color: #44F;
+}
+
+.memberSearchField {
+	width: 100%;
+	max-width: 300px;
+
+}
+
+
+/* Chat View */
+
+textarea {
+	box-sizing: border-box;
+	resize: none;
+	min-height: 50px;
+}
+
+.chatBox {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.chatBody {
+	flex: 1;
+	box-sizing: border-box;
+	font-size: 1.1em;
+	display: block;
+	padding: 1em;
+	overflow-y: auto;
+  background-color: #FFF;
+}
+
+.chatInput {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	max-height: 100px;
+	min-height: 100px;
+	margin-bottom: 2em;
+	box-sizing: border-box;
+	padding: 1em;
+	border: none;
+
+}
+
+.chatInputTextarea {
+	display: flex;
+	flex: 1;
+}
+
+.guessTxt{
+	display: flex;
+}
+
+.userTxt{
+	display: flex;
+}
+
+
+.message{
+	width: auto;
+	min-width: 12%;
+	max-width: 700px;
+	height: auto;
+	color: black;
+	word-break: keep-all;
+	margin-top: 0.5em;
+	margin-left: 1em;
+}
+
+.user{
+	flex-direction: column;
+}
+
+.guess{
+	flex-direction: column;
+}
+
+.userName{
+	font-weight: bold;
+}
+
+.time{
+	font-style: italic;
+	color: #999;
+}
+
+.info{
+	margin: 0 auto;
+	width: 40%;
+	padding: 2em;
+	border: 1px solid #D5D5D5;
+	margin-top: 5%;
+}
+
+.infoButton{
+	color: #F99;
+	margin-left: 0.2em;
+	font-size: 1.5em;
+}
+.infoTitle{
+	color: #3F6BB4;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.info p {
+	font-weight: bold;
+}
+
+.infoList li {
+	padding: 0.5em 0;
+}
